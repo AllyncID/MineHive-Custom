@@ -1,0 +1,473 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mine Hive Survival FarmMeta Tool Guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="hero panel">
+            <p class="eyebrow">Mine Hive Survival</p>
+            <h1>FarmMeta Custom Tool Guide</h1>
+            <p class="lead">
+                This page now covers the full FarmMeta tool lineup from MineHive Survival
+                <strong>verdant_hoe</strong>, <strong>grove_axe</strong>, <strong>harvest_shears</strong>,
+                and <strong>bamboo_blade</strong>.
+            </p>
+            <div class="hero-stats">
+                <article>
+                    <span class="stat-label">Craftable Lines</span>
+                    <strong>4 Custom Tools</strong>
+                    <span>Hoe, Axe, Shears, Bamboo Blade</span>
+                </article>
+                <article>
+                    <span class="stat-label">Ingredient Chain</span>
+                    <strong>4 Custom Parts</strong>
+                    <span>Verdant, Fiber, Core, Bamboo Core</span>
+                </article>
+                <article>
+                    <span class="stat-label">Progression Scope</span>
+                    <strong>10 Tiers Each</strong>
+                    <span>Starter to late-game farming lines</span>
+                </article>
+            </div>
+        </header>
+
+        <main>
+            <section class="section">
+                <div class="section-heading">
+                    <p class="eyebrow">Tool Roster</p>
+                    <h2>All FarmMeta manual farming tools</h2>
+                    <p>
+                        The YAML does not stop at the hoe. There are four separate tool lanes, each with its own crop pool,
+                        recipe layout, and 10-tier upgrade track.
+                    </p>
+                </div>
+
+                <div class="lineup-grid">
+                    <article class="panel lineup-card tool-panel tool-panel--hoe">
+                        <p class="eyebrow">Field Crops</p>
+                        <h3>Verdant Hoe</h3>
+                        <p>Built for wheat, carrots, potatoes, beetroot, nether wart, torchflower crop, and pitcher crop.</p>
+                        <ul class="stat-list">
+                            <li>Recipe: 2 Verdant Ingots, 1 Binding Core, 2 Sticks</li>
+                            <li>Starter: Honey Hoe I, 240 durability, $0.03 per item</li>
+                            <li>Capstone: Skull Hoe X, x1.80 multiplier, 22% double drop</li>
+                        </ul>
+                        <div class="tag-row">
+                            <span class="tag">Wheat</span>
+                            <span class="tag">Roots</span>
+                            <span class="tag">Nether Wart</span>
+                        </div>
+                    </article>
+
+                    <article class="panel lineup-card tool-panel tool-panel--axe">
+                        <p class="eyebrow">Vertical Harvest</p>
+                        <h3>Grove Axe</h3>
+                        <p>Targets sugar cane, cactus, and cocoa with a simpler handle layout than the hoe.</p>
+                        <ul class="stat-list">
+                            <li>Recipe: 3 Verdant Ingots, 1 Binding Core, 1 Stick</li>
+                            <li>Starter: Honey Axe I, 260 durability, $0.04 per item</li>
+                            <li>Capstone: Skull Axe X, x1.80 multiplier, 22% double drop</li>
+                        </ul>
+                        <div class="tag-row">
+                            <span class="tag">Sugar Cane</span>
+                            <span class="tag">Cactus</span>
+                            <span class="tag">Cocoa</span>
+                        </div>
+                    </article>
+
+                    <article class="panel lineup-card tool-panel tool-panel--shears">
+                        <p class="eyebrow">Line Harvest</p>
+                        <h3>Harvest Shears</h3>
+                        <p>Berry and kelp tool line using extra Crop Fiber directly in the final recipe.</p>
+                        <ul class="stat-list">
+                            <li>Recipe: 2 Crop Fiber, 2 Verdant Ingots, 1 Binding Core</li>
+                            <li>Starter: Old Scissors I, 220 durability, $0.03 per item</li>
+                            <li>Capstone: Scissors X, x1.78 multiplier, 22% double drop</li>
+                        </ul>
+                        <div class="tag-row">
+                            <span class="tag">Sweet Berry Bush</span>
+                            <span class="tag">Kelp</span>
+                            <span class="tag">Kelp Plant</span>
+                        </div>
+                    </article>
+
+                    <article class="panel lineup-card tool-panel tool-panel--blade">
+                        <p class="eyebrow">Bamboo Lane</p>
+                        <h3>Bamboo Blade</h3>
+                        <p>Special sword-type farming tool powered by Bamboo Core instead of Binding Core.</p>
+                        <ul class="stat-list">
+                            <li>Recipe: 1 Bamboo Core, 1 Verdant Ingot, 1 Stick</li>
+                            <li>Starter: Honey Sword I, 240 durability, $0.04 per item</li>
+                            <li>Capstone: Skull Sword X, x1.82 multiplier, 23% double drop</li>
+                        </ul>
+                        <div class="tag-row">
+                            <span class="tag">Bamboo</span>
+                            <span class="tag">Blade Line</span>
+                            <span class="tag">Bamboo Core</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-heading">
+                    <p class="eyebrow">Ingredient Workshop</p>
+                    <h2>Every custom component used by the tool lines</h2>
+                    <p>
+                        Three tools share the Verdant plus Binding chain, while the bamboo line branches into Bamboo Core.
+                    </p>
+                </div>
+
+                <div class="recipe-grid">
+                    <article class="panel recipe-card">
+                        <div class="recipe-header">
+                            <div>
+                                <p class="eyebrow">Ingredient 1</p>
+                                <h3>Verdant Ingot</h3>
+                            </div>
+                            <span class="result-badge">Shared Alloy</span>
+                        </div>
+                        <div class="recipe-layout">
+                            <div class="craft-grid">
+                                <div class="cell wheat">Wheat</div>
+                                <div class="cell bone">Bone Meal</div>
+                                <div class="cell wheat">Wheat</div>
+                                <div class="cell bone">Bone Meal</div>
+                                <div class="cell emerald">Emerald</div>
+                                <div class="cell bone">Bone Meal</div>
+                                <div class="cell wheat">Wheat</div>
+                                <div class="cell bone">Bone Meal</div>
+                                <div class="cell wheat">Wheat</div>
+                            </div>
+                            <div class="recipe-copy">
+                                <p>Main alloy used by all four tool lines.</p>
+                                <ul>
+                                    <li>4 Wheat, 4 Bone Meal, 1 Emerald</li>
+                                    <li>Used by hoe, axe, shears, and bamboo blade</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="panel recipe-card">
+                        <div class="recipe-header">
+                            <div>
+                                <p class="eyebrow">Ingredient 2</p>
+                                <h3>Crop Fiber</h3>
+                            </div>
+                            <span class="result-badge">Organic Part</span>
+                        </div>
+                        <div class="recipe-layout">
+                            <div class="craft-grid">
+                                <div class="cell string">String</div>
+                                <div class="cell cane">Sugar Cane</div>
+                                <div class="cell string">String</div>
+                                <div class="cell cane">Sugar Cane</div>
+                                <div class="cell string">String</div>
+                                <div class="cell cane">Sugar Cane</div>
+                                <div class="cell string">String</div>
+                                <div class="cell cane">Sugar Cane</div>
+                                <div class="cell string">String</div>
+                            </div>
+                            <div class="recipe-copy">
+                                <p>Intermediate fiber used in Binding Core and directly by Harvest Shears.</p>
+                                <ul>
+                                    <li>5 String, 4 Sugar Cane per craft</li>
+                                    <li>Binding Core consumes 4; shears need 2 more directly</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="panel recipe-card">
+                        <div class="recipe-header">
+                            <div>
+                                <p class="eyebrow">Ingredient 3</p>
+                                <h3>Binding Core</h3>
+                            </div>
+                            <span class="result-badge">Frame Part</span>
+                        </div>
+                        <div class="recipe-layout">
+                            <div class="craft-grid">
+                                <div class="cell iron">Iron Ingot</div>
+                                <div class="cell fiber">Crop Fiber</div>
+                                <div class="cell iron">Iron Ingot</div>
+                                <div class="cell fiber">Crop Fiber</div>
+                                <div class="cell blaze">Blaze Powder</div>
+                                <div class="cell fiber">Crop Fiber</div>
+                                <div class="cell iron">Iron Ingot</div>
+                                <div class="cell fiber">Crop Fiber</div>
+                                <div class="cell iron">Iron Ingot</div>
+                            </div>
+                            <div class="recipe-copy">
+                                <p>Used by Verdant Hoe, Grove Axe, and Harvest Shears.</p>
+                                <ul>
+                                    <li>4 Iron Ingots, 4 Crop Fiber, 1 Blaze Powder</li>
+                                    <li>Skipped entirely by the bamboo blade line</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="panel recipe-card">
+                        <div class="recipe-header">
+                            <div>
+                                <p class="eyebrow">Ingredient 4</p>
+                                <h3>Bamboo Core</h3>
+                            </div>
+                            <span class="result-badge highlight">Blade Only</span>
+                        </div>
+                        <div class="recipe-layout">
+                            <div class="craft-grid">
+                                <div class="cell empty"></div>
+                                <div class="cell bamboo">Bamboo</div>
+                                <div class="cell empty"></div>
+                                <div class="cell bamboo">Bamboo</div>
+                                <div class="cell verdant">Verdant Ingot</div>
+                                <div class="cell bamboo">Bamboo</div>
+                                <div class="cell empty"></div>
+                                <div class="cell bamboo">Bamboo</div>
+                                <div class="cell empty"></div>
+                            </div>
+                            <div class="recipe-copy">
+                                <p>Exclusive branch for the bamboo tool line.</p>
+                                <ul>
+                                    <li>4 Bamboo, 1 Verdant Ingot</li>
+                                    <li>Only used by Bamboo Blade</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-heading">
+                    <p class="eyebrow">Tool Recipes</p>
+                    <h2>Final craft layouts for each FarmMeta tool</h2>
+                    <p>These are the exact shaped recipes that turn the custom ingredients into the four craftable tools.</p>
+                </div>
+
+                <div class="recipe-grid">
+                    <article class="panel recipe-card final-recipe tool-recipe tool-recipe--hoe">
+                        <div class="recipe-header">
+                            <div>
+                                <p class="eyebrow">Tool Recipe</p>
+                                <h3>Verdant Hoe</h3>
+                            </div>
+                            <span class="result-badge highlight">Honey Hoe I</span>
+                        </div>
+                        <div class="recipe-layout">
+                            <div class="craft-grid">
+                                <div class="cell verdant">Verdant Ingot</div>
+                                <div class="cell verdant">Verdant Ingot</div>
+                                <div class="cell empty"></div>
+                                <div class="cell empty"></div>
+                                <div class="cell stick">Stick</div>
+                                <div class="cell core">Binding Core</div>
+                                <div class="cell empty"></div>
+                                <div class="cell stick">Stick</div>
+                                <div class="cell empty"></div>
+                            </div>
+                            <div class="recipe-copy">
+                                <p>Field-crop entry tool for the main manual farming lane.</p>
+                                <ul>
+                                    <li>Allowed crops: Wheat, Carrots, Potatoes, Beetroot, Nether Wart, Torchflower Crop, Pitcher Crop</li>
+                                    <li>Raw plan: 8 Wheat, 8 Bone Meal, 2 Emerald, 20 String, 16 Sugar Cane, 4 Iron Ingots, 1 Blaze Powder, 2 Sticks</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="panel recipe-card final-recipe tool-recipe tool-recipe--axe">
+                        <div class="recipe-header">
+                            <div>
+                                <p class="eyebrow">Tool Recipe</p>
+                                <h3>Grove Axe</h3>
+                            </div>
+                            <span class="result-badge highlight">Honey Axe I</span>
+                        </div>
+                        <div class="recipe-layout">
+                            <div class="craft-grid">
+                                <div class="cell verdant">Verdant Ingot</div>
+                                <div class="cell verdant">Verdant Ingot</div>
+                                <div class="cell empty"></div>
+                                <div class="cell verdant">Verdant Ingot</div>
+                                <div class="cell core">Binding Core</div>
+                                <div class="cell empty"></div>
+                                <div class="cell empty"></div>
+                                <div class="cell stick">Stick</div>
+                                <div class="cell empty"></div>
+                            </div>
+                            <div class="recipe-copy">
+                                <p>Vertical crop tool optimized for cane, cactus, and cocoa lanes.</p>
+                                <ul>
+                                    <li>Allowed crops: Sugar Cane, Cactus, Cocoa</li>
+                                    <li>Raw plan: 12 Wheat, 12 Bone Meal, 3 Emerald, 20 String, 16 Sugar Cane, 4 Iron Ingots, 1 Blaze Powder, 1 Stick</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="panel recipe-card final-recipe tool-recipe tool-recipe--shears">
+                        <div class="recipe-header">
+                            <div>
+                                <p class="eyebrow">Tool Recipe</p>
+                                <h3>Harvest Shears</h3>
+                            </div>
+                            <span class="result-badge highlight">Old Scissors I</span>
+                        </div>
+                        <div class="recipe-layout">
+                            <div class="craft-grid">
+                                <div class="cell empty"></div>
+                                <div class="cell fiber">Crop Fiber</div>
+                                <div class="cell verdant">Verdant Ingot</div>
+                                <div class="cell fiber">Crop Fiber</div>
+                                <div class="cell empty"></div>
+                                <div class="cell verdant">Verdant Ingot</div>
+                                <div class="cell empty"></div>
+                                <div class="cell core">Binding Core</div>
+                                <div class="cell empty"></div>
+                            </div>
+                            <div class="recipe-copy">
+                                <p>Line harvest route for berries and kelp where Crop Fiber stays in the final craft.</p>
+                                <ul>
+                                    <li>Allowed crops: Sweet Berry Bush, Kelp, Kelp Plant</li>
+                                    <li>Raw plan: 8 Wheat, 8 Bone Meal, 2 Emerald, 30 String, 24 Sugar Cane, 4 Iron Ingots, 1 Blaze Powder</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="panel recipe-card final-recipe tool-recipe tool-recipe--blade">
+                        <div class="recipe-header">
+                            <div>
+                                <p class="eyebrow">Tool Recipe</p>
+                                <h3>Bamboo Blade</h3>
+                            </div>
+                            <span class="result-badge highlight">Honey Sword I</span>
+                        </div>
+                        <div class="recipe-layout">
+                            <div class="craft-grid">
+                                <div class="cell empty"></div>
+                                <div class="cell bamboo-core">Bamboo Core</div>
+                                <div class="cell empty"></div>
+                                <div class="cell empty"></div>
+                                <div class="cell verdant">Verdant Ingot</div>
+                                <div class="cell empty"></div>
+                                <div class="cell empty"></div>
+                                <div class="cell stick">Stick</div>
+                                <div class="cell empty"></div>
+                            </div>
+                            <div class="recipe-copy">
+                                <p>Dedicated bamboo sword line with its own core branch.</p>
+                                <ul>
+                                    <li>Allowed crops: Bamboo</li>
+                                    <li>Raw plan: 8 Wheat, 8 Bone Meal, 2 Emerald, 4 Bamboo, 1 Stick</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="section-heading">
+                    <p class="eyebrow">Tier Ladders</p>
+                    <h2>All 10-tier name tracks by tool line</h2>
+                    <p>This keeps the page complete without only documenting the hoe progression.</p>
+                </div>
+
+                <div class="ladder-grid">
+                    <article class="panel ladder-card tool-panel tool-panel--hoe">
+                        <p class="eyebrow">Verdant Hoe</p>
+                        <h3>Field Crop Ladder</h3>
+                        <div class="ladder-meta"><span>Start: Honey Hoe</span><span>End: Skull Hoe</span></div>
+                        <ol class="tier-track">
+                            <li><span class="tier-rank">I</span>Honey Hoe</li>
+                            <li><span class="tier-rank">II</span>Minty Hoe</li>
+                            <li><span class="tier-rank">III</span>Blossom Hoe</li>
+                            <li><span class="tier-rank">IV</span>Amethyst Hoe</li>
+                            <li><span class="tier-rank">V</span>Overgrown Hoe</li>
+                            <li><span class="tier-rank">VI</span>Ruby Hoe</li>
+                            <li><span class="tier-rank">VII</span>Blaze Hoe</li>
+                            <li><span class="tier-rank">VIII</span>Ender Hoe</li>
+                            <li><span class="tier-rank">IX</span>Sculk Hoe</li>
+                            <li><span class="tier-rank">X</span>Skull Hoe</li>
+                        </ol>
+                        <p class="small-note">Capstone stats: 1250 durability, x1.80 multiplier, $0.14 per harvested item.</p>
+                    </article>
+
+                    <article class="panel ladder-card tool-panel tool-panel--axe">
+                        <p class="eyebrow">Grove Axe</p>
+                        <h3>Vertical Crop Ladder</h3>
+                        <div class="ladder-meta"><span>Start: Honey Axe</span><span>End: Skull Axe</span></div>
+                        <ol class="tier-track">
+                            <li><span class="tier-rank">I</span>Honey Axe</li>
+                            <li><span class="tier-rank">II</span>Minty Axe</li>
+                            <li><span class="tier-rank">III</span>Blossom Axe</li>
+                            <li><span class="tier-rank">IV</span>Amethyst Axe</li>
+                            <li><span class="tier-rank">V</span>Overgrown Axe</li>
+                            <li><span class="tier-rank">VI</span>Ruby Axe</li>
+                            <li><span class="tier-rank">VII</span>Blaze Axe</li>
+                            <li><span class="tier-rank">VIII</span>Ender Axe</li>
+                            <li><span class="tier-rank">IX</span>Heavy Core Axe</li>
+                            <li><span class="tier-rank">X</span>Skull Axe</li>
+                        </ol>
+                        <p class="small-note">Capstone stats: 1360 durability, x1.80 multiplier, $0.15 per harvested item.</p>
+                    </article>
+
+                    <article class="panel ladder-card tool-panel tool-panel--shears">
+                        <p class="eyebrow">Harvest Shears</p>
+                        <h3>Line Harvest Ladder</h3>
+                        <div class="ladder-meta"><span>Start: Old Scissors</span><span>End: Scissors</span></div>
+                        <ol class="tier-track">
+                            <li><span class="tier-rank">I</span>Old Scissors</li>
+                            <li><span class="tier-rank">II</span>Old Scissors</li>
+                            <li><span class="tier-rank">III</span>Old Scissors</li>
+                            <li><span class="tier-rank">IV</span>Old Scissors</li>
+                            <li><span class="tier-rank">V</span>Old Scissors</li>
+                            <li><span class="tier-rank">VI</span>Scissors</li>
+                            <li><span class="tier-rank">VII</span>Scissors</li>
+                            <li><span class="tier-rank">VIII</span>Scissors</li>
+                            <li><span class="tier-rank">IX</span>Scissors</li>
+                            <li><span class="tier-rank">X</span>Scissors</li>
+                        </ol>
+                        <p class="small-note">Capstone stats: 1300 durability, x1.78 multiplier, $0.14 per harvested item.</p>
+                    </article>
+
+                    <article class="panel ladder-card tool-panel tool-panel--blade">
+                        <p class="eyebrow">Bamboo Blade</p>
+                        <h3>Bamboo Ladder</h3>
+                        <div class="ladder-meta"><span>Start: Honey Sword</span><span>End: Skull Sword</span></div>
+                        <ol class="tier-track">
+                            <li><span class="tier-rank">I</span>Honey Sword</li>
+                            <li><span class="tier-rank">II</span>Minty Sword</li>
+                            <li><span class="tier-rank">III</span>Blossom Sword</li>
+                            <li><span class="tier-rank">IV</span>Amethyst Sword</li>
+                            <li><span class="tier-rank">V</span>Ruby Sword</li>
+                            <li><span class="tier-rank">VI</span>Blaze Sword</li>
+                            <li><span class="tier-rank">VII</span>Ender Sword</li>
+                            <li><span class="tier-rank">VIII</span>Heavy Core Sword</li>
+                            <li><span class="tier-rank">IX</span>Sculk Sword</li>
+                            <li><span class="tier-rank">X</span>Skull Sword</li>
+                        </ol>
+                        <p class="small-note">Capstone stats: 1350 durability, x1.82 multiplier, $0.15 per harvested item.</p>
+                    </article>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer-note">
+            <p>Source synced from <span class="code">OrionProgression/src/main/resources/farms/tools.yml</span> using the full tool set: <span class="code">verdant_hoe</span>, <span class="code">grove_axe</span>, <span class="code">harvest_shears</span>, and <span class="code">bamboo_blade</span>.</p>
+        </footer>
+    </div>
+</body>
+</html>
