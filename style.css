@@ -1,0 +1,520 @@
+:root {
+    --bg: #0f140f;
+    --bg-soft: #171f16;
+    --panel: rgba(24, 34, 24, 0.82);
+    --panel-strong: rgba(31, 43, 31, 0.94);
+    --line: rgba(170, 209, 122, 0.18);
+    --text: #edf5df;
+    --muted: #b7c3aa;
+    --leaf: #aad17a;
+    --amber: #f4c86e;
+    --rose: #ec8f79;
+    --teal: #79d4c6;
+    --violet: #b094ff;
+    --shadow: 0 24px 80px rgba(0, 0, 0, 0.38);
+    --radius-xl: 28px;
+    --radius-lg: 22px;
+    --radius-md: 16px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Space Grotesk", "Trebuchet MS", sans-serif;
+    color: var(--text);
+    background:
+        radial-gradient(circle at top left, rgba(170, 209, 122, 0.16), transparent 28%),
+        radial-gradient(circle at top right, rgba(121, 212, 198, 0.11), transparent 22%),
+        linear-gradient(180deg, #111812 0%, #0b100c 100%);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    background-size: 36px 36px;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent 90%);
+}
+
+.page-shell {
+    width: min(1180px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 36px 0 72px;
+}
+
+.panel {
+    background: linear-gradient(180deg, rgba(32, 45, 33, 0.88), rgba(20, 28, 20, 0.9));
+    border: 1px solid var(--line);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(12px);
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 40px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: auto -120px -140px auto;
+    width: 320px;
+    height: 320px;
+    border-radius: 999px;
+    background: radial-gradient(circle, rgba(244, 200, 110, 0.36), rgba(244, 200, 110, 0));
+}
+
+.eyebrow {
+    margin: 0 0 10px;
+    font-size: 0.8rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--leaf);
+}
+
+h1,
+h2,
+h3,
+p,
+ul {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: clamp(2.4rem, 5vw, 4.6rem);
+    line-height: 0.95;
+    letter-spacing: -0.04em;
+    max-width: 12ch;
+    margin-bottom: 14px;
+}
+
+h2 {
+    font-size: clamp(1.6rem, 2.8vw, 2.2rem);
+    margin-bottom: 12px;
+}
+
+h3 {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+}
+
+.lead,
+.section-heading p,
+.recipe-copy p,
+.small-note,
+.footer-note {
+    color: var(--muted);
+}
+
+.lead {
+    max-width: 64ch;
+    font-size: 1.03rem;
+}
+
+.hero-stats,
+.split-layout,
+.recipe-layout,
+.tier-grid,
+.chip-row {
+    display: grid;
+    gap: 18px;
+}
+
+.hero-stats {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 26px;
+}
+
+.hero-stats article,
+.tier-card {
+    padding: 18px;
+    border-radius: var(--radius-lg);
+    background: rgba(15, 20, 15, 0.42);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-label,
+.tier-index,
+.result-badge,
+.code {
+    font-family: "JetBrains Mono", monospace;
+}
+
+.stat-label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.74rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--amber);
+}
+
+.hero-stats strong {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.section {
+    margin-top: 26px;
+}
+
+.split-layout {
+    grid-template-columns: 1.2fr 0.8fr;
+}
+
+.split-layout > .panel,
+.recipe-card,
+.tier-card {
+    padding: 26px;
+}
+
+.chip-row {
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    margin-top: 20px;
+}
+
+.chip {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(170, 209, 122, 0.2);
+    background: rgba(170, 209, 122, 0.08);
+    color: #e7f5d5;
+    padding: 0 14px;
+    text-align: center;
+}
+
+.material-plan ul,
+.recipe-copy ul {
+    margin: 0;
+    padding-left: 18px;
+    color: var(--text);
+}
+
+.section-heading {
+    margin-bottom: 16px;
+}
+
+.recipe-stack {
+    display: grid;
+    gap: 18px;
+}
+
+.lineup-grid,
+.recipe-grid,
+.ladder-grid {
+    display: grid;
+    gap: 18px;
+}
+
+.lineup-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.recipe-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.ladder-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.lineup-card,
+.ladder-card {
+    padding: 24px;
+}
+
+.tool-panel {
+    position: relative;
+    overflow: hidden;
+}
+
+.tool-panel::after {
+    content: "";
+    position: absolute;
+    right: -30px;
+    bottom: -55px;
+    width: 140px;
+    height: 140px;
+    border-radius: 999px;
+    opacity: 0.6;
+}
+
+.tool-panel--hoe::after {
+    background: radial-gradient(circle, rgba(170, 209, 122, 0.22), rgba(170, 209, 122, 0));
+}
+
+.tool-panel--axe::after {
+    background: radial-gradient(circle, rgba(244, 200, 110, 0.2), rgba(244, 200, 110, 0));
+}
+
+.tool-panel--shears::after {
+    background: radial-gradient(circle, rgba(121, 212, 198, 0.2), rgba(121, 212, 198, 0));
+}
+
+.tool-panel--blade::after {
+    background: radial-gradient(circle, rgba(176, 148, 255, 0.22), rgba(176, 148, 255, 0));
+}
+
+.tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    min-height: 32px;
+    padding: 0 10px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+    color: var(--text);
+    font-size: 0.78rem;
+}
+
+.stat-list {
+    margin: 16px 0 0;
+    padding-left: 18px;
+    color: var(--text);
+}
+
+.stat-list li + li,
+.recipe-copy li + li {
+    margin-top: 8px;
+}
+
+.tool-recipe--hoe {
+    border-color: rgba(170, 209, 122, 0.24);
+}
+
+.tool-recipe--axe {
+    border-color: rgba(244, 200, 110, 0.24);
+}
+
+.tool-recipe--shears {
+    border-color: rgba(121, 212, 198, 0.24);
+}
+
+.tool-recipe--blade {
+    border-color: rgba(176, 148, 255, 0.24);
+}
+
+.recipe-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.result-badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 38px;
+    padding: 0 14px;
+    border-radius: 999px;
+    background: rgba(121, 212, 198, 0.12);
+    color: var(--teal);
+    border: 1px solid rgba(121, 212, 198, 0.18);
+    white-space: nowrap;
+}
+
+.result-badge.highlight {
+    background: rgba(244, 200, 110, 0.12);
+    border-color: rgba(244, 200, 110, 0.18);
+    color: var(--amber);
+}
+
+.recipe-layout {
+    grid-template-columns: minmax(280px, 340px) 1fr;
+    align-items: start;
+}
+
+.craft-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.cell {
+    aspect-ratio: 1;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8px;
+    font-size: 0.82rem;
+    line-height: 1.15;
+    background: rgba(10, 12, 10, 0.72);
+}
+
+.cell.empty {
+    background: rgba(255, 255, 255, 0.02);
+    border-style: dashed;
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+.wheat { background: rgba(192, 153, 79, 0.24); }
+.bone { background: rgba(229, 229, 214, 0.22); }
+.emerald { background: rgba(95, 220, 143, 0.22); }
+.string { background: rgba(188, 188, 188, 0.2); }
+.cane { background: rgba(134, 216, 111, 0.2); }
+.iron { background: rgba(179, 185, 198, 0.24); }
+.fiber { background: rgba(244, 200, 110, 0.16); }
+.blaze { background: rgba(236, 143, 121, 0.2); }
+.verdant { background: rgba(170, 209, 122, 0.2); }
+.stick { background: rgba(154, 121, 86, 0.22); }
+.core { background: rgba(176, 148, 255, 0.18); }
+.bamboo { background: rgba(134, 216, 111, 0.22); }
+.bamboo-core { background: rgba(108, 180, 116, 0.24); }
+
+.final-recipe {
+    border-color: rgba(244, 200, 110, 0.24);
+}
+
+.tier-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.tier-card {
+    position: relative;
+    min-height: 216px;
+}
+
+.tier-index {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    background: rgba(170, 209, 122, 0.12);
+    color: var(--leaf);
+    border: 1px solid rgba(170, 209, 122, 0.16);
+}
+
+.tier-card p {
+    margin-bottom: 6px;
+}
+
+.tier-card small {
+    display: block;
+    margin-top: 14px;
+    color: var(--muted);
+    line-height: 1.4;
+}
+
+.ladder-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 0.76rem;
+    color: var(--muted);
+}
+
+.tier-track {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 8px;
+}
+
+.tier-track li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 10px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tier-rank {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 28px;
+    font-family: "JetBrains Mono", monospace;
+    color: var(--leaf);
+    font-size: 0.82rem;
+}
+
+.code {
+    padding: 2px 8px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.06);
+    color: #f6f9ef;
+}
+
+.footer-note {
+    margin-top: 26px;
+    text-align: center;
+    font-size: 0.92rem;
+}
+
+@media (max-width: 1040px) {
+    .hero-stats,
+    .split-layout,
+    .recipe-layout,
+    .tier-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .lineup-grid,
+    .ladder-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 760px) {
+    .page-shell {
+        width: min(100% - 20px, 1180px);
+        padding-top: 20px;
+    }
+
+    .hero,
+    .split-layout > .panel,
+    .recipe-card,
+    .tier-card {
+        padding: 20px;
+    }
+
+    .hero-stats,
+    .split-layout,
+    .recipe-layout,
+    .tier-grid,
+    .lineup-grid,
+    .recipe-grid,
+    .ladder-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recipe-header {
+        flex-direction: column;
+    }
+
+    .ladder-meta {
+        flex-direction: column;
+    }
+}
